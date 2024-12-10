@@ -1,0 +1,126 @@
+/* إعداد الخطوط العامة */
+body {
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f0f8ff, #d4eaf8);
+    color: #000000;
+    text-align: center;
+    direction: rtl;
+}
+
+/* الشعار */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+header .logo {
+    width: 100px;
+    height: auto;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #1a4d34cf;
+    margin: 10px 0 0;
+}
+
+/* الحاوية الأساسية */
+.container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fefffe;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* النماذج */
+form {
+    margin: 20px 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #1a4d34cf;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a4d34cf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #1a4d34cf;
+}
+
+/* تفاصيل الحجز */
+#bookingDetails {
+    text-align: left;
+    margin: 15px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#bookingDetails p {
+    margin: 5px 0;
+}
+
+/* أزرار الحجز */
+button#cancelBooking, button#rescheduleBooking {
+    width: 48%;
+    margin: 5px 1%;
+    padding: 10px;
+    background-color: #1a4d34cf;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button#cancelBooking:hover, button#rescheduleBooking:hover {
+    background-color: #4ce69bd3;
+}
+
+/* استجابة للأجهزة الصغيرة */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    form button, button#cancelBooking, button#rescheduleBooking {
+        font-size: 14px;
+    }
+
+    header .logo {
+        width: 80px;
+    }
+
+    header h1 {
+        font-size: 20px;
+    }
+}
+

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>الأقسام الطبية</title>
+</head>
+<body>
+    <div class="container">
+        <h2>الأقسام الطبية والأطباء</h2>
+        <ul id="departmentsList"></ul>
+        <a href="index.html" class="nav-button">العودة إلى الصفحة الرئيسية</a>
+    </div>
+
+    <script>
+        const departments = {
+            "طب الأطفال": ["د. أحمد علي", "د. سارة محمد"],
+            "الجلدية": ["د. خالد حسن", "د. نورا جمال"],
+            "العظام": ["د. عماد سليمان", "د. هالة يوسف"]
+        };
+
+        document.addEventListener("DOMContentLoaded", function() {
+            const departmentsList = document.getElementById("departmentsList");
+
+            for (let department in departments) {
+                const listItem = document.createElement("li");
+                listItem.innerHTML = `<strong>${department}</strong>: ${departments[department].join(", ")}`;
+                departmentsList.appendChild(listItem);
+            }
+        });
+    </script>
+</body>
+</html>

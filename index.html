@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <header>
+    </header>
+    
+    <title>عيادة طبية - حجز المواعيد</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>عيادة الرعاية الطبية</h1>
+        </header>
+
+        <!-- استمارة تسجيل المرضى -->
+        <section>
+            <h2>سجل بياناتك</h2>
+            <form id="patientForm">
+                <label for="name">الاسم:</label>
+                <input type="text" id="name" required>
+
+                <label for="age">العمر:</label>
+                <input type="number" id="age" required>
+
+                <label for="phone">رقم الهاتف:</label>
+                <input type="text" id="phone" required>
+
+                <label for="condition">الحالة الصحية:</label>
+                <input type="text" id="condition" required>
+
+                <label for="departmentSelect">اختر القسم الطبي:</label>
+                <select id="departmentSelect" required>
+                    <option value="">اختر القسم</option>
+                </select>
+
+                <label for="doctorSelect">اختر الطبيب:</label>
+                <select id="doctorSelect" required>
+                    <option value="">اختر الطبيب</option>
+                </select>
+
+                <label for="appointmentDate">اختر الموعد:</label>
+                <input type="datetime-local" id="appointmentDate" required>
+
+                <button type="submit">تأكيد الحجز</button>
+            </form>
+        </section>
+
+        <!-- تفاصيل الحجز -->
+        <section>
+            <h2>تفاصيل الحجز</h2>
+            <div id="bookingDetails">
+                <p>لا يوجد حجز حاليًا.</p>
+            </div>
+            <button id="cancelBooking">إلغاء الحجز</button>
+            <button id="rescheduleBooking">تأجيل الموعد</button>
+        </section>
+
+        <!-- التواصل -->
+        <section>
+            <h2>التواصل والاستفسارات</h2>
+            <form id="contactForm">
+                <label for="message">رسالتك:</label>
+                <textarea id="message" required></textarea>
+                <button type="submit">إرسال عبر واتساب</button>
+            </form>
+        </section>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
